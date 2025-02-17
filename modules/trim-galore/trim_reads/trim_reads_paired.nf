@@ -52,7 +52,7 @@ process trim_reads_paired
             fi
 
             trim_galore --paired --gzip  !{read_1} !{read_2} \
-                --2colour 20 --length 75 --basename !{sample} \
+                --2colour 20 --length 50 --basename !{sample} \
                 -j !{task.cpus} --output_dir .
 
             NREADS=`gzip -cd !{sample}_val_1.fq.gz \
